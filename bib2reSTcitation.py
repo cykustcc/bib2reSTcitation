@@ -20,7 +20,7 @@ def bib2rest(input_bibfile,output_txtfile):
 	print output_txtfile
 	start_pattern = re.compile(r"^(?: |\t)*\@(?:book|article|incollection|inproceedings)\{([a-z0-9]+), *$")
 	title_pattern = re.compile(r"^(?: |\t)*title=\{([a-zA-Z0-9 ]+)\}(?: |\t)*,(?: |\t)*$")
-	author_pattern = re.compile(r"^(?: |\t)*author=\{([a-zA-Z0-9 ,;\.-]+)\}(?: |\t)*,(?: |\t)*$")
+	author_pattern = re.compile(r"^(?: |\t)*author=\{([a-zA-Z0-9 ,;\.\-]+)\}(?: |\t)*,(?: |\t)*$")
 	other_info_pattern = re.compile(r"^(?: |\t)*(?:journal|volume|number|year|publisher|pages|organization|booktitle)=\{([a-zA-Z0-9 ,;\.-]+)\}(?: |\t)*,(?: |\t)*$")
 	end_pattern = re.compile("^(?: |\t)*}(?: |\t)*$")
 	with open(input_bibfile,'rb') as input_handle:
